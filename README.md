@@ -4,6 +4,6 @@
 Для добавления новых уровней или карт вы вожете отредактировать код игры и выпустить свою собственную версию.
 
 ____
-[Релизная версия игры (Alpha 1.3)](https://github.com/KoksMen/KoksCardGameConsole/releases/tag/KoksRelease)  
-[Wiki (KokscardGame Alpha 1.3)](https://github.com/KoksMen/KoksCardGameConsole/wiki/Информация-(Русский-язык))
+[Релизная версия игры (Alpha 1.4)](https://github.com/KoksMen/KoksCardGameConsole/releases/tag/KoksRelease)  
+[Wiki (KokscardGame Alpha 1.4)](https://github.com/KoksMen/KoksCardGameConsole/wiki/Информация-(Русский-язык))
 ____
