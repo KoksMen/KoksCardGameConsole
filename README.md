@@ -5,5 +5,5 @@
 
 ____
 [Релизная версия игры (Alpha 1.3)](https://github.com/KoksMen/KoksCardGameConsole/releases/tag/KoksRelease)  
-[Wiki (KokscardGame Alpha 1.3)](https://github.com/KoksMen/KoksCardGameConsole/wiki/RU-INFO)
+[Wiki (KokscardGame Alpha 1.3)](https://github.com/KoksMen/KoksCardGameConsole/wiki/Информация-(Русский-язык))
 ____
