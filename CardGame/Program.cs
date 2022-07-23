@@ -64,7 +64,7 @@ async void PlayMusic()
 {
     if (CurrentGame.GameStatus != true)
     {
-        System.Media.SoundPlayer FonPlayer = new System.Media.SoundPlayer("fonmusic.wav");
+        System.Media.SoundPlayer FonPlayer = new System.Media.SoundPlayer(CardGame.Properties.Resources.fonmusic);
         FonPlayer.Play();
     }
 }
