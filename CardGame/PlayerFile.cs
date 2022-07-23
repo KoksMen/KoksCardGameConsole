@@ -45,12 +45,29 @@ namespace CardGame_v3
 
         public MainCard SelectedCard()
         {
-            int SelectedNumber;
-            MainCard _SelectedCard;
+            int SelectedNumber = 1;
+            MainCard _SelectedCard = null;
             ShowInventory(MainCard.Mode.BattleMode);
             Console.Write("Enter number of selected card: ");
-            SelectedNumber = Convert.ToInt32(Console.ReadLine());
-            _SelectedCard = CardInventory[SelectedNumber - 1];
+            int.TryParse(Console.ReadLine(), out SelectedNumber);
+            if (SelectedNumber == 0)
+            {
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Wrong card number, try again");
+                Console.ResetColor();
+                return _SelectedCard;
+            }
+            //SelectedNumber = Convert.ToInt32(Console.ReadLine());
+            if (SelectedNumber <= CardInventory.Length) _SelectedCard = CardInventory[SelectedNumber - 1];
+            else 
+            { 
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Wrong card number, try again");
+                Console.ResetColor();
+                return _SelectedCard; 
+            }
             if (_SelectedCard.AliveStatus == false)
             {
                 Console.Clear();

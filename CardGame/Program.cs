@@ -10,15 +10,18 @@ Level Level2 = new Level(2, EnemyCard2);
 Level [] AllLevels = { Level1, Level2 };
 Game CurrentGame = new Game(AllLevels, _Player);
 
+
+int musiccount = 0;
 while (CurrentGame.GameStatus != true)
 {
+    if (musiccount == 0) {PlayMusic(); musiccount = 1;}
     Console.Clear();
     int Mode;
     Console.WriteLine($"{CurrentGame._Player.PlayerName} you have two proccess:\n" +
         $"1)Attack level {CurrentGame.CurrentLVL + 1}\n" +
         $"2)Show inventory\n" +
         $"{CurrentGame._Player.PlayerName} make your choose: ");
-    Mode = Convert.ToInt32(Console.ReadLine());
+    int.TryParse(Console.ReadLine(), out Mode);
     switch (Mode)
     {
         case 1:
@@ -57,7 +60,14 @@ Console.WriteLine("" +
     "░░░╚═╝░░░░╚════╝░░╚═════╝░  ╚══════╝╚═╝░░╚══╝╚═════╝░  ░╚═════╝░╚═╝░░╚═╝╚═╝░░░░░╚═╝╚══════╝\n");
 Console.ReadKey();
 
-
+async void PlayMusic()
+{
+    if (CurrentGame.GameStatus != true)
+    {
+        System.Media.SoundPlayer FonPlayer = new System.Media.SoundPlayer("fonmusic.wav");
+        FonPlayer.Play();
+    }
+}
 
 
 
